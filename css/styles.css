@@ -27,6 +27,7 @@ ol {
 img {
   display: block;
 }
+
 .container {
   width: 1158px;
   padding-right: 15px;
@@ -240,8 +241,6 @@ address {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-/**можливо сюди потрібно вставить авонтаж контейнер**/
 
 .advantages-list {
   display: flex;
@@ -487,6 +486,12 @@ address {
   color: #f4f4fd;
   max-width: 264px;
 }
+
+.box-social {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
 .social-text {
   color: #fff;
   font-weight: 500;
@@ -521,4 +526,292 @@ address {
 .social-link-footer:hover,
 .social-link-footer:focus {
   background-color: #31d0aa;
+}
+
+/*Modal window*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+
+  transition: opacity 300ms ease-in, visibility 300ms ease-in;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.foorer-mailing {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-mailing-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  padding-bottom: 16px;
+}
+
+.footer-mailing-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-mailing-form-input {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+  background-color: var(--NAVY-BLUE, #2e2f42);
+  width: 264px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--WHITE, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  outline: none;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-right: auto;
+  padding-bottom: 8px;
+  margin-right: 24px;
+}
+
+.footer-mailing-form-input::placeholder {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.48px;
+}
+
+.footer-mailing-form-input:focus {
+  border-color: #4d5ae5;
+}
+
+.footer-mailing-form-btn {
+  display: inline-flex;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--IRIS, #4d5ae5);
+  min-width: 165px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.footer-mailing-form-btn-filling {
+  color: var(--WHITE, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+
+.footer-mailing-form-btn-filling-icon {
+  fill: #fff;
+}
+
+/*Mofal window*/
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 408px;
+  min-height: 584px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: var(--DAIRY, #fcfcfc);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+}
+.modal-btn {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  background-color: #e7e9fc;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
+}
+
+.modal-btn-icon {
+  fill: #2e2f42;
+}
+.modal-text {
+  width: 360px;
+  color: var(--NAVY-BLUE, #2e2f42);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.32px;
+  margin-bottom: 8px;
+}
+
+.modal-form {
+}
+.modal-form-label {
+  display: flex;
+  flex-direction: column;
+  color: var(--LIGHT-SLATE, #8e8f99);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+.modal-form-input-box {
+  position: relative;
+}
+.modal-form-label-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 35px;
+  border-radius: 4px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  outline: none;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+}
+
+.modal-form-label-input:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-form-label-input:focus + .modal-form-icon {
+  fill: #4d5ae5;
+}
+
+.modal-form-label-text-input {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  padding: 8px 16px;
+}
+
+.modal-form-label-text-input:focus {
+  border-color: #4d5ae5;
+}
+
+.checkbox {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  width: 360px;
+  align-items: center;
+  border-radius: 4px;
+  color: var(--LIGHT-SLATE, #8e8f99);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+}
+.input-checkbox {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.input-checkbox-box-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.4));
+  border-radius: 4px;
+}
+
+.input-checkbox:checked + .input-checkbox-box-icon {
+  background-color: #404bbf;
+  border-radius: 4px;
+  border-color: #404bbf;
+}
+
+.input-checkbox:checked + .input-checkbox-box-icon > .input-checkbox-icon {
+  opacity: 1;
+}
+
+.input-checkbox-icon {
+  opacity: 0;
+}
+
+.privacy-policy {
+  color: #4d5ae5;
+  text-decoration-line: underline;
+}
+
+.modal-btn-send {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  background-color: var(--IRIS, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--WHITE, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
 }
