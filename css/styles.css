@@ -778,7 +778,7 @@ address {
   line-height: 14px;
   letter-spacing: 0.48px;
 }
-.input-checkbox {
+.input-checkbox.visually-hidden {
   display: flex;
   visibility: hidden;
   position: absolute;
