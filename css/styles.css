@@ -795,14 +795,20 @@ address {
 }
 
 .checkbox-label {
+  display: flex;
+  flex-direction: row;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  gap: 8px;
+  padding-left: 24px;
 }
 
 .input-checkbox-box-icon {
   display: inline-flex;
+  position: absolute;
+  left: 24px;
   align-items: center;
   justify-content: center;
   width: 16px;
